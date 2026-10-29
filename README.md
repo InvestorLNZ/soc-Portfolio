@@ -46,11 +46,31 @@ An end-to-end IoT security alerting system built with Arduino UNO R4 WiFi and Ra
 
 ---
 
+### 3. AI-Assisted SOC Lab with Splunk
+**Status:** 🚧 In Progress — Part 1 of 5 complete (logging pipeline live)
+**Focus:** Splunk SIEM deployment, Sysmon detection engineering, log pipeline validation, adversary simulation, AI-assisted triage
+
+A Splunk counterpart to the Wazuh lab above: a Windows Server 2022 domain feeding Sysmon and Windows Security logs into Splunk Enterprise for real-time detection. One domain controller already produces ~72,000 events across 49 event types. Built end-to-end, including the silent failures — clock drift, a malformed forwarder config, and a log backlog — documented as a debugging log. Next phases attack the domain from Kali, build SPL detections, and add an AI triage layer (SENTINEL).
+
+**Key technologies:** Windows Server 2022, Active Directory, Sysmon, Splunk Enterprise, Splunk Universal Forwarder, Ubuntu, Kali Linux
+
+**Highlights:**
+- End-to-end log pipeline validated from endpoint to SIEM
+- 62-account tiered AD model (T0/T1/T2) across 6 departments
+- Sysmon with SwiftOnSecurity config for high-fidelity telemetry
+- Full debugging log — the silent failures and how I found them
+- Roadmap to SPL detections and AI-assisted triage with MITRE ATT&CK mapping
+
+[View Project →](projects/splunk-soc-lab/README.md)
+
+---
+
 ## Skills Evidenced
 
 | Area | Evidence |
 |---|---|
-| SIEM Deployment | Wazuh on dedicated Ubuntu hardware, Windows agent integration |
+| SIEM Deployment | Wazuh and Splunk on Ubuntu, Windows agent / forwarder integration |
+| SIEM Engineering (Splunk) | Universal Forwarder, index design, SPL search, Sysmon ingestion |
 | Threat Detection | MITRE ATT&CK tactic identification, real-time event monitoring |
 | Active Directory | Tiered OU structure, GPO hardening, PowerShell automation |
 | Network Security | Home lab segmentation, agent-to-manager communication |
