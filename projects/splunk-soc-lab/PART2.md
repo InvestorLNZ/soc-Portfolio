@@ -68,14 +68,29 @@ Over a full week this rule had **zero hits** — because every one of 31 ticket 
 
 Ordered attack → detection.
 
-| File | Shows | Side |
-|---|---|---|
-| `screenshots/part2/01-nmap-scan.png` | AD service enumeration, SMB signing required | Attacker |
-| `screenshots/part2/02-password-spray-kali.png` | Password spray — 12 failed logons | Attacker |
-| `screenshots/part2/03-spray-detection-splunk.png` | Spray caught — 14 accounts in one window | SIEM |
-| `screenshots/part2/04-spray-alert-triggered.png` | Scheduled detection firing automatically | SIEM |
-| `screenshots/part2/05-kerberoast-blocked-kali.png` | Kerberoast blocked — KDC_ERR_ETYPE_NOSUPP | Attacker |
-| `screenshots/part2/06-kerberos-encryption-types.png` | 31/31 tickets AES256, 0 RC4 — hardening proof | SIEM |
+**Recon — AD services enumerated, SMB signing required (attacker)**
+
+![nmap scan of the domain controller](screenshots/part2/01-nmap-scan.png)
+
+**Password spray from Kali — 12 failed logons (attacker)**
+
+![password spray run from Kali](screenshots/part2/02-password-spray-kali.png)
+
+**Detection — 14 accounts targeted in one 10-minute window (SIEM)**
+
+![Splunk spray detection showing 14 accounts](screenshots/part2/03-spray-detection-splunk.png)
+
+**Scheduled alert firing automatically (SIEM)**
+
+![Splunk alert trigger history](screenshots/part2/04-spray-alert-triggered.png)
+
+**Kerberoasting blocked — KDC_ERR_ETYPE_NOSUPP (attacker)**
+
+![Kerberoasting attempt blocked by AES-only policy](screenshots/part2/05-kerberoast-blocked-kali.png)
+
+**AES-only Kerberos — 31/31 tickets AES256, 0 RC4 (SIEM)**
+
+![Splunk ticket encryption type breakdown](screenshots/part2/06-kerberos-encryption-types.png)
 
 ### What this demonstrates
 
