@@ -97,3 +97,7 @@ The part that taught me the most. Each of these failed silently — no error, ju
 - **Tiered Administration Model** — T0/T1/T2 privilege separation, carried over from the AD/Wazuh lab
 - **Data validation and reconciliation** — confirming logged events match real activity, and investigating when they don't
 - **Time synchronisation** — why accurate clocks underpin every incident timeline
+
+## Part 2 — Adversary Simulation & Detection
+
+Full write-up: [PART2.md](PART2.md) — attack chain, detections, and control-validation results.
