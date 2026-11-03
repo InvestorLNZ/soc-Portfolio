@@ -56,7 +56,7 @@ A home SOC that feeds a Windows Active Directory domain into Splunk for real-tim
 ## Project Phases
 
 - [x] Part 1 — Logging pipeline: AD → Sysmon → Splunk, validated
-- [ ] Part 2 — Adversary simulation from Kali (password spray, Kerberoasting, lateral movement)
+- [x] Part 2 — Adversary simulation from Kali (password spray, Kerberoasting, lateral movement)
 - [ ] Part 3 — Detection engineering: SPL detections, detection rate and MTTD
 - [ ] Part 4 — AI triage (SENTINEL): alert triage, MITRE ATT&CK mapping, human-approved response
 - [ ] Part 5 — Wrap-up: full metrics and reproducible build notes
